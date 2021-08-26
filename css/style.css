@@ -1,5 +1,5 @@
 /*
-Theme Name: KenzieFlix
+Theme Name: Netflix
 Author: Kenzie Academy
 Author URI: kenzie.com.br;
 Version: 1.0
@@ -16,23 +16,123 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 
 /* VARIÁVEIS */
 :root{
-  
+	--bg-color: #00002e;
 }
 
 /*BODY*/
 	body{
+		font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+		color: white;
+		background-color: var(--bg-color);
+	}	
 
+	figcaption{
+		display: none;
 	}
 
 /*TOPO*/
 	header.topo{
-		
+		margin: 20px auto;
 	}
+		header .topo img{
+			width: 240px;
+		}
+	
 
 /*RODAPÉ*/
-	
+	footer{
+		margin: 40px 0;
+		display: flex;
+		justify-content: center;
+	}
+		footer button{
+			font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+			font-size: 20px;
+			padding: 15px 50px;
+			background-color: var(--bg-color);
+			color: white;
+			border: solid 2px;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: 0.3s;
+		}
+		footer button:hover{
+			background-color: white;
+			color: var(--bg-color);
+			transition: 0.3s;
+		}
+
 
 /*PÁGINA INICIAL*/
 	div.pg-home{
-		
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 80px;
 	}
+		.pg-home header{
+			text-align: center;
+			font-size: 40px;
+			margin-bottom: 40px;
+		}
+		.pg-home ul{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+			.pg-home ul li {
+				width: 186px;
+				margin: 15px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-between;
+			}
+				.pg-home ul li figure{
+					margin-bottom: 20px;
+					border: solid var(--bg-color) 4px;
+					cursor: pointer;
+					transition: 0.2s;
+				}
+				.pg-home ul li figure img{
+					width: 186px;
+					border-radius: 3px;
+				}
+				.pg-home ul li figure:hover{
+					border: solid white 4px;
+					transition: 0.2s;
+				}
+				
+			.pg-home .addPerfil{}
+				.pg-home .addPerfil figure {
+					width: 186px;
+					display: flex;
+					justify-content: center
+				}
+					.pg-home .addPerfil figure img{
+						width: 60%;
+						margin: 41px 0;
+					}
+			
+			.pg-home h3{
+				font-size: 20px;
+				cursor: pointer;
+			}
+
+@media (min-width: 582px){
+	.pg-home ul{
+		width: 450px;
+	}
+}
+
+@media (min-width: 900px){
+	header.topo{
+		margin: 20px;
+	}
+	.pg-home header{
+		font-size: 60px;
+	}
+	.pg-home ul{
+		width: 900px;
+	}
+}
