@@ -33,8 +33,9 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 /*TOPO*/
 	header.topo{
 		margin: 20px auto;
+		text-align: center;
 	}
-		header .topo img{
+		header.topo img{
 			width: 240px;
 		}
 	
@@ -128,6 +129,7 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 @media (min-width: 900px){
 	header.topo{
 		margin: 20px;
+		text-align: left;
 	}
 	.pg-home header{
 		font-size: 60px;
